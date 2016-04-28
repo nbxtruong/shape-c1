@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0075)http://dept-info.labri.fr/~baudon/Master/AO/Vietnam16/TD/Shapes/Shapes.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  
+  <title>Shapes</title>
+</head>
+<body>
+<h1 style="text-align: center;">Shapes</h1>
+<ol>
+  <li>Run <code style="font-family: Courier New,Courier,monospace;">eclipse</code>
+and create a new project named <code style="font-family: Courier New,Courier,monospace;">Shapes</code>.
+Create in this project a package <span style="font-family: Courier New,Courier,monospace;">shapes</span> and
+add the class <a href="http://dept-info.labri.fr/~baudon/Master/AO/Vietnam16/TD/Shapes/Rectangle.java"><span style="font-family: Courier New,Courier,monospace;">Rectangle</span></a>
+to it. Read the documentation about the abstract class <span style="font-family: Courier New,Courier,monospace;">java.awt.geom.Point2D</span>
+and comment the code of&nbsp;<span style="font-family: Courier New,Courier,monospace;">Rectangle</span>.<br>
+Add a new class <span style="font-family: Courier New,Courier,monospace;">Test</span> in the
+default package with a main method and use it to create, move and print
+a rectangle.<br>
+    <br>
+  </li>
+  <li>Following the example of <span style="font-family: Courier New,Courier,monospace;">Rectangle</span>,
+add a new class <span style="font-family: Courier New,Courier,monospace;">Square</span> in
+the&nbsp;package <span style="font-family: Courier New,Courier,monospace;">shapes</span>. To
+avoid the code duplication, propose two solutions, one based on an
+abstract class, the second on delegation.<br>
+    <br>
+  </li>
+  <li>Propose a solution to create a <span style="font-family: Courier New,Courier,monospace;">List</span> in <span style="font-family: Courier New,Courier,monospace;">Test</span> in
+which you may put instances of <span style="font-family: Courier New,Courier,monospace;">Rectangle</span>
+or <span style="font-family: Courier New,Courier,monospace;">Square</span>,
+but no other type of object.<br>
+    <br>
+  </li>
+  <li>Add a new private method <span style="font-family: Courier New,Courier,monospace;">movingMessage()</span>
+to <span style="font-family: Courier New,Courier,monospace;">Rectangle</span>
+which print "<span style="font-family: Courier New,Courier,monospace;">moving
+to x, y</span>" when the position of the rectangle is moved to a new
+value (x, y). Modify the rest of the code of <span style="font-family: Courier New,Courier,monospace;">Rectangle</span>
+in such a way that <span style="font-family: Courier New,Courier,monospace;">movingMessage</span>
+is called each time the rectangle moves. <br>
+    <br>
+Now, we want to modify the method <span style="font-family: Courier New,Courier,monospace;">position()</span>
+in such a way that it returns a <span style="font-style: italic;">view</span>
+on the position of the rectangle. Note that the method <span style="font-family: Courier New,Courier,monospace;">movingMessage</span>
+must be called when you change the coordinates of the point returned by
+    <span style="font-family: Courier New,Courier,monospace;">position()</span>.<br>
+    <br>
+For example, after the execution of the following instructions :<br>
+    <code><br>
+Rectangle r = new Rectangle(new Point2D.Double(10,10), 5, 5);<span style="font-family: monospace;"></span><br>
+Point2D p = r.position();<br>
+p.setLocation(20, 20);<br>
+    </code><br>
+the following message will appear on the standard output :<br>
+    <code><br>
+moving to 20, 20</code><br>
+  </li>
+</ol>
+<code><br>
+<br>
+</code>
+
+
+</body></html>
